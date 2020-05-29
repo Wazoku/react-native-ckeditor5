@@ -69,7 +69,7 @@ class CKEditor5 extends PureComponent {
   render() {
     const {
       maxHeight, editorConfig, style, initialData, renderLoading, disableTooltips, height,
-      androidHardwareAccelerationDisabled, fontFamily,
+      androidHardwareAccelerationDisabled, fontFamily, backgroundColor
     } = this.props;
     return (
       <WebView
@@ -96,6 +96,7 @@ class CKEditor5 extends PureComponent {
             <meta name="viewport" content="width=device-width,initial-scale=1">
             <style>
               .ck-editor__editable {
+                  background-color: ${backgroundColor || '#fff'} !important;
                   height: ${height}px;
                   max-height: ${maxHeight || height}px;
               }
